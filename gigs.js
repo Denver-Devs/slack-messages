@@ -1,6 +1,10 @@
 const utils = require("./util");
 
 async function main() {
+  // These two are very similar, but not identical.
+  // I like to keep them separate in case I want to drastically alter the
+  // messaging between the two later on
+  // - Dan
   const announcementsBlock = [
     {
       type: "section",

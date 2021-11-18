@@ -1,6 +1,7 @@
 name: Denver Devs Gigs Day
 on:
-  workflow_dispatch:
+  schedule:
+    - cron: "0 16 * * 4"
 jobs:
   post:
     runs-on: ubuntu-latest
