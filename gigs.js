@@ -1,12 +1,148 @@
-const utils = require('./util');
+const utils = require("./util");
 
 async function main() {
-  const blocks = encodeURIComponent(
-    JSON.stringify({
-      // put block content here
-    })
-  )
-  await utils.postAsUser('replace-me-with-channel-id', { blocks })
+  const announcementsBlock = [
+    {
+      blocks: [
+        {
+          type: "section",
+          text: {
+            type: "mrkdwn",
+            text: "Good morning! Today is another gigs day! :moneybag::smile::computer:",
+          },
+        },
+        {
+          type: "section",
+          text: {
+            type: "mrkdwn",
+            text: ":handshake: If you’ve got a job posting: post it in #dd-job-board!",
+          },
+        },
+        {
+          type: "section",
+          text: {
+            type: "mrkdwn",
+            text: ":female-technologist: If you’re looking for work: post it in #dd-job-board!",
+          },
+        },
+        {
+          type: "context",
+          elements: [
+            {
+              type: "mrkdwn",
+              text: ":question: Posts from the same week are allowed. Need help? Ask us in #dd-community",
+            },
+          ],
+        },
+        {
+          type: "divider",
+        },
+        {
+          type: "section",
+          text: {
+            type: "mrkdwn",
+            text: ":warning: Please read our Topic Gigs Rules before posting.",
+          },
+          accessory: {
+            type: "button",
+            text: {
+              type: "plain_text",
+              text: "View Rules",
+              emoji: true,
+            },
+            style: "primary",
+            value: "rules",
+            url: "https://denverdevs.org/resources/job-board-rules/",
+            action_id: "button-action",
+          },
+        },
+        {
+          type: "divider",
+        },
+        {
+          type: "context",
+          elements: [
+            {
+              type: "mrkdwn",
+              text: ":pencil: Get help formatting your post with /gig_bot",
+            },
+          ],
+        },
+      ],
+    },
+  ];
+  const jobBoardBlock = [
+    {
+      blocks: [
+        {
+          type: "section",
+          text: {
+            type: "mrkdwn",
+            text: "Good morning! Today is another gigs day! :moneybag::smile::computer:",
+          },
+        },
+        {
+          type: "section",
+          text: {
+            type: "mrkdwn",
+            text: ":handshake: If you’ve got a job posting: post it here!",
+          },
+        },
+        {
+          type: "section",
+          text: {
+            type: "mrkdwn",
+            text: ":female-technologist: If you’re looking for work: post it here!",
+          },
+        },
+        {
+          type: "context",
+          elements: [
+            {
+              type: "mrkdwn",
+              text: ":question: Posts from the same week are allowed. Need help? Ask us in #dd-community",
+            },
+          ],
+        },
+        {
+          type: "divider",
+        },
+        {
+          type: "section",
+          text: {
+            type: "mrkdwn",
+            text: ":warning: Please read our Topic Gigs Rules before posting.",
+          },
+          accessory: {
+            type: "button",
+            text: {
+              type: "plain_text",
+              text: "View Rules",
+              emoji: true,
+            },
+            style: "primary",
+            value: "rules",
+            url: "https://denverdevs.org/resources/job-board-rules/",
+            action_id: "button-action",
+          },
+        },
+        {
+          type: "divider",
+        },
+        {
+          type: "context",
+          elements: [
+            {
+              type: "mrkdwn",
+              text: ":pencil: Get help formatting your post with /gig_bot",
+            },
+          ],
+        },
+      ],
+    },
+  ];
+  await utils.postAsUser("C040F1EV5", { announcementsBlock });
+  await utils.postAsUser("C042VCKLM", { jobBoardBlock });
 }
 
 main();
