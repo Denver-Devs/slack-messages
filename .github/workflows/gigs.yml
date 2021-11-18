@@ -1,7 +1,7 @@
 name: Denver Devs Gigs Day
 on:
   schedule:
-    - cron: "0 16 * * 4"
+    - cron: "0 16 * * 3"
 jobs:
   post:
     runs-on: ubuntu-latest
