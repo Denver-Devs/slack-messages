@@ -17,6 +17,20 @@ async function main() {
       type: "section",
       text: {
         type: "mrkdwn",
+        text: ":mega: ** Reminder: We've moved to Discord! Head over to denverdevs.org to join, and then post your jobs in the new #dd-job-board there!**",
+      },
+    },
+    {
+      type: "section",
+      text: {
+        type: "mrkdwn",
+        text: "Bonus: Discord gives us unlimited history, so your job posts will stay up until you remove them! See you there!",
+      },
+    },
+    {
+      type: "section",
+      text: {
+        type: "mrkdwn",
         text: ":handshake: If you’ve got a job posting: post it in #dd-job-board!",
       },
     },
